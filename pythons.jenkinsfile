@@ -15,11 +15,11 @@ pipeline{
         }
 
 
-        stage('Check version '){
+        /*stage('Check version '){
             steps{
                 bat "python -V" 
             }
-        }
+        }*/
 
         stage('Build'){
             steps{
