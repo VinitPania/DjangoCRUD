@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('Environment'){
             steps{
-                echo 'running python on ${env.PYTHON}'
+                echo "running python on ${env.PYTHON}"
             }
         }
 
@@ -17,7 +17,7 @@ pipeline{
 
         stage('Check version '){
             steps{
-                bat 'python -V '
+                bat "python -V" 
             }
         }
 
