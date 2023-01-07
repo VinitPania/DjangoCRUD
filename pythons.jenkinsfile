@@ -23,14 +23,14 @@ pipeline{
 
         stage('Build'){
             steps{
-                bat 'python python.py'
+                bat "python python.py"
             }
         }
 
 
         stage('Test'){
             steps{
-                bat 'python test -P coverage'
+                bat "python test -P coverage"
             }
         }
 
