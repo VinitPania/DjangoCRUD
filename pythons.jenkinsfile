@@ -2,6 +2,11 @@ pipeline{
     agent any
 
     stages{
+        stage('Environment'){
+            steps{
+                echo 'running python on ${env.PYTHON}'
+            }
+        }
 
         stage('Checkout'){
             steps{
