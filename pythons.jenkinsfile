@@ -17,20 +17,20 @@ pipeline{
 
         /*stage('Check version '){
             steps{
-                bat "python -V" 
+                bat "python3 -V" 
             }
         }*/
 
         stage('Build'){
             steps{
-                bat "python python.py"
+                bat "python3 python.py"
             }
         }
 
 
         stage('Test'){
             steps{
-                bat "python test -P coverage"
+                bat "python3 test -P coverage"
             }
         }
 
