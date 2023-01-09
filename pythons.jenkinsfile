@@ -15,23 +15,31 @@ pipeline{
         }
 
 
-        /*stage('Check version '){
+        stage('Check version '){
             steps{
-                bat "python3 -V" 
-            }
-        }*/
+                script{
+                    bat "python3 -V" 
+                }
+            }      
+        }
+
 
         stage('Build'){
             steps{
-                bat "python3 python.py"
+                script{
+                    bat "python3 python.py"
+                }
             }
         }
 
 
+
         stage('Test'){
             steps{
-                bat "python3 test -P coverage"
-            }
+                script{
+                    bat "python3 test -P coverage"
+                }
+            }        
         }
 
         stage('Cleanworkspace'){
