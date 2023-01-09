@@ -18,7 +18,7 @@ pipeline{
         stage('Check version '){
             steps{
                 script{
-                    bat "python3 -V" 
+                    bat "python -V" 
                 }
             }      
         }
@@ -27,7 +27,7 @@ pipeline{
         stage('Build'){
             steps{
                 script{
-                    bat "python3 python.py"
+                    bat "python python.py"
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline{
         stage('Test'){
             steps{
                 script{
-                    bat "python3 test -P coverage"
+                    bat "python test -P coverage"
                 }
             }        
         }
