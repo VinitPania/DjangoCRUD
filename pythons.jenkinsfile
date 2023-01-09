@@ -36,9 +36,9 @@ pipeline{
 
         stage('Test'){
             steps{
-                script{
+                
                     bat "python test -P coverage"
-                }
+                
             }        
         }
 
